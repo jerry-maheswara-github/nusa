@@ -1,0 +1,263 @@
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jerry Maheswara">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>..:: Tool Gue ::..</title>
+    <style>
+        body{
+            /* font-family: 'Courier New', Courier, monospace; */
+            background-color: #01274C;
+            background-color: white;
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
+            font: 400 12px Arial, Helvetica, sans-serif;
+        }
+        .bulat{
+            border-radius: 2000px;
+            width: 40px;
+        }
+
+        a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color:red;
+            display:flow; 
+        }
+
+        #nusa svg{
+            width: 50px;
+        }
+
+        marquee{
+            color: white;
+            font-size: 30pt;
+            /* background-color:white; */
+            background-image: linear-gradient(rgb(0, 11, 59), #003264);
+            padding: 20px ;
+            margin-bottom: 100px;
+            font-family: 'Courier New', Courier, monospace;
+            /* width: 100%; */
+            max-width: 100%; 
+             
+        }
+
+        .track { 
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(100%); }
+        }
+
+        .squarepant {
+            width: 96%;
+            margin: 0px;
+            display: grid;
+            grid-template: repeat(1, 1fr) / repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        .cell {
+            padding: 20px;
+            background: #003264;
+            background-image: linear-gradient(#014673, #001325);
+            font-size: 2em; 
+            border-radius: 15px;
+            background: #f4f4f4;
+            border: 1px #54aade solid;
+            color: #54AADE;
+            min-width: 200px;
+        }
+        .cell a{
+            color: #f79121;
+        }
+        .cell a:hover{
+            /* color: red; */
+            text-decoration: underline;
+        }
+
+        .logo{
+            background: url('logo.png');
+            text-indent: -9999px;
+            height: 34px;
+            width: 100px;
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+
+        header{
+            border-bottom: 5px solid #0C5075;
+            margin: 0px;
+            position: relative;
+            height: 38px;
+            background: -webkit-linear-gradient(top, #666666 0%,#444444 50%,#151515 51%,#2f2f2f 100%);
+            min-width: 950px;
+            overflow: hidden;
+        }
+        .left {
+            display: inline;
+            float: left;
+        }
+        ul.dropdown {
+            margin-top:5px !important;
+            /* font-weight: bold; */
+            /* width: 760px; */
+            z-index: 597;
+            /* float: left; */
+        }
+        ul.dropdown a,
+        ul.dropdown a,
+        ul.dropdown a:link,
+        ul.dropdown a:visited {color:#FFF;text-decoration: none;}
+        ul.dropdown a {display: block;padding: 6px 10px 11px;}
+        ul.dropdown li a {
+            font: 400 1.1em Arial, Helvetica, sans-serif;
+            /* border: medium none; */
+            -webkit-border-top-left-radius:5px;
+            -webkit-border-top-right-radius:5px;
+            -moz-border-radius-topleft:5px;
+            -moz-border-radius-topright:5px;
+            -khtml-border-top-left-radius:5px;
+            -khtml-border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+        }
+        ul.dropdown,
+        ul.dropdown li {
+            list-style: none outside none;
+            /* margin: 0pt; */
+            /* padding: 0pt; */
+            display:block;
+            margin-right:5px;
+            float: left;
+            line-height: 1.3em;
+            vertical-align: middle;
+            color: rgb(0, 0, 0);
+            border: medium none;
+        }
+        ul.dropdown a:hover { color: rgb(0, 0, 0); }
+        ul.dropdown li a:hover { 
+            color:#FFF !important;
+            /*border:1px solid #b7b7b7;*/
+            background: #97a4ad;
+            background: -moz-linear-gradient(top,  #97a4ad 0%, #6b7f8a 42%, #21282c 43%, #25343d 71%, #475158 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#97a4ad), color-stop(42%,#6b7f8a), color-stop(43%,#21282c), color-stop(71%,#25343d), color-stop(100%,#475158));
+            background: -webkit-linear-gradient(top,  #97a4ad 0%,#6b7f8a 42%,#21282c 43%,#25343d 71%,#475158 100%);
+            background: -o-linear-gradient(top,  #97a4ad 0%,#6b7f8a 42%,#21282c 43%,#25343d 71%,#475158 100%);
+            background: -ms-linear-gradient(top,  #97a4ad 0%,#6b7f8a 42%,#21282c 43%,#25343d 71%,#475158 100%);
+            background: linear-gradient(top,  #97a4ad 0%,#6b7f8a 42%,#21282c 43%,#25343d 71%,#475158 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97a4ad', endColorstr='#475158',GradientType=0 );
+        }
+        ul.dropdown a:active { color: rgb(255, 165, 0); }
+        ul.dropdown li.active {
+            border:1px solid #020202;
+            border-bottom:none;
+            background: #4c86a4;
+            background: -moz-linear-gradient(top,  #4c86a4 0%, #3a7999 42%, #044c71 43%, #0b5074 71%, #0d5176 100%) !important;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c86a4), color-stop(42%,#3a7999), color-stop(43%,#044c71), color-stop(71%,#0b5074), color-stop(100%,#0d5176)) !important;
+            background: -webkit-linear-gradient(top,  #4c86a4 0%,#3a7999 42%,#044c71 43%,#0b5074 71%,#0d5176 100%) !important;
+            background: -o-linear-gradient(top,  #4c86a4 0%,#3a7999 42%,#044c71 43%,#0b5074 71%,#0d5176 100%) !important;
+            background: -ms-linear-gradient(top,  #4c86a4 0%,#3a7999 42%,#044c71 43%,#0b5074 71%,#0d5176 100%) !important;
+            background: linear-gradient(top,  #4c86a4 0%,#3a7999 42%,#044c71 43%,#0b5074 71%,#0d5176 100%) !important;
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c86a4', endColorstr='#0d5176',GradientType=0 ) !important;
+            -webkit-border-top-left-radius:5px;
+            -webkit-border-top-right-radius:5px;
+            -moz-border-radius-topleft:5px;
+            -moz-border-radius-topright:5px;
+            -khtml-border-top-left-radius:5px;
+            -khtml-border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+        }
+        ul.dropdown li.active:hover,
+        ul.dropdown li.active a:hover { background:none;}
+    </style>
+</head>
+<body>
+
+
+<marquee class="marquee-x" style="display: none;">
+    <div id="nusa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+            <path d="M20.64 30.58c.38-.33.77-.66 1.18-1s.91-.67 1.41-1c3.59-2.49 8.34-5.19 12-8.35l.17-.15.18-.15a1.29 1.29 0 0 0 .17-.16l.18-.16.18-.16.43-.42a1.21 1.21 0 0 0 .16-.16l.16-.15a14.27 14.27 0 0 0 3.45-5.17c-.17-.45-.36-.9-.56-1.33a1 1 0 0 0 0-.1v.05a10.8 10.8 0 0 1-2.22 3.8 18 18 0 0 1-4 3.62c-2 1.15-12 6.63-12.45 7.42-1-.44-9.43-3.53-14.23-3.36a30.65 30.65 0 0 0-3.55.26A3.15 3.15 0 0 0 1 25.13l-.38.47c0 .15.07.29.11.44a20.89 20.89 0 0 0 13.72 14.67 20.45 20.45 0 0 1 6.19-10.13ZM41.64 19.1v-.16q-.09-1-.27-2c-.54 2.4-2.19 5.89-7.15 10-.62.52-1.19 1-1.71 1.54v.05l-.13.13-.18.18A21.53 21.53 0 0 0 28.34 34l-.08.15s-.05.11-.08.16a1.3 1.3 0 0 0-.08.17c0 .07-.07.15-.11.22a13.29 13.29 0 0 0-1.37 6.19 20.44 20.44 0 0 0 4.26-1.76 23.14 23.14 0 0 1 3.56-8.76c2.56-3.61 6.07-7.23 7.2-11.27ZM40.84 23.78c-.14.25-.27.5-.42.75-2.56 4.22-6.17 8.37-6.63 12.67a20.79 20.79 0 0 0 7.88-15.42 14 14 0 0 1-.83 2Z" fill="#f37721"></path>
+            <path d="M38.19 20.91A17.9 17.9 0 0 0 41 15.46c-.13-.48-.28-1-.44-1.44v-.14c-.56 2.12-2.23 6.17-8.5 10.66C23.05 31 19.81 34.75 18.6 41.59h.17a20.59 20.59 0 0 0 2.09.11c.68 0 1.36 0 2-.1.05-.19.1-.43.17-.69.13-.56.31-1.26.55-2a.14.14 0 0 1 0-.06 20.39 20.39 0 0 1 2.75-6c3.15-4.34 10-9.38 11.86-11.94Z" fill="#f37721"></path>
+            <path d="M32.06 24.54c6.27-4.49 8-8.51 8.46-10.66-.05-.13-.09-.26-.14-.38a14.27 14.27 0 0 1-3.45 5.17l-.16.15a1.21 1.21 0 0 1-.16.16l-.43.42-.18.16-.18.16a1.29 1.29 0 0 1-.17.16l-.18.15-.17.15c-3.65 3.16-8.4 5.86-12 8.35-.5.34-1 .68-1.41 1s-.8.64-1.18 1a20.45 20.45 0 0 0-6.19 10.13 20.41 20.41 0 0 0 4.15.88c1.14-6.79 4.38-10.54 13.39-17Z" fill="#fff"></path>
+            <path d="m32.32 28.73.13-.13v-.05c.52-.51 1.09-1 1.71-1.54 5-4.13 6.61-7.62 7.15-10-.1-.51-.21-1-.35-1.53a17.78 17.78 0 0 1-2.82 5.45c-1.86 2.56-8.71 7.6-11.82 11.93a20.39 20.39 0 0 0-2.75 6 .14.14 0 0 0 0 .06c-.24.78-.42 1.48-.55 2-.07.26-.12.5-.16.69a21 21 0 0 0 3.73-.71A13.29 13.29 0 0 1 28 34.72c0-.07.07-.15.11-.22a1.3 1.3 0 0 1 .08-.17s.05-.11.08-.16l.08-.15a21.53 21.53 0 0 1 3.8-5.11ZM41.64 19.1c-1.13 4-4.68 7.66-7.16 11.27a23.14 23.14 0 0 0-3.56 8.76 20.71 20.71 0 0 0 2.89-1.92c.46-4.3 4.07-8.45 6.63-12.67.15-.25.28-.5.42-.75a14 14 0 0 0 .85-2v-.93c.01-.59-.02-1.18-.07-1.76ZM33.5 19.5a18 18 0 0 0 4-3.62 10.8 10.8 0 0 0 2.22-3.8c-.82 1.45-4.8 3.19-6.36 3.35a29.64 29.64 0 0 1-4.89-.35S30 14.55 30 13.4s-2.13-1.68-2.13-1.68.53.56.53 1c0 1.33-2.67 2-3.73 2.12a1.21 1.21 0 0 0-.09-.53 1.19 1.19 0 0 0-1.51-.62c.08 0 .08.09.17.18a.38.38 0 0 1 .09.13.63.63 0 0 1-.26.84c-.36.27-1 .18-4.72.36-3.44.16-5.67 3.7-6 4.25-.11-.08-.95-.13-5.38.43a7.11 7.11 0 0 0-6.45 5.61v.15l.48-.51a3.15 3.15 0 0 1 2.3-1.31 30.65 30.65 0 0 1 3.55-.26c4.8-.17 13.25 2.92 14.23 3.36.41-.79 10.46-6.27 12.42-7.42Zm-13 1.68a2.15 2.15 0 0 1-1.25 1.06 3.23 3.23 0 0 1-1.6.17 3 3 0 0 1-2.22-2.21 3.21 3.21 0 0 1 .18-1.59 1.26 1.26 0 0 0 .36.76 1.43 1.43 0 0 0 .62.36 2.13 2.13 0 0 0 .71-.09 1.34 1.34 0 0 0 .53-.44 2.25 2.25 0 0 0 .18-.71 1.15 1.15 0 0 0-.18-.62v-.06a1.18 1.18 0 0 0-1.14-.49 2.6 2.6 0 0 1 1.52-.43 2.78 2.78 0 0 1 2.79 2.7 2.44 2.44 0 0 1-.5 1.59Z" fill="#fff"></path>
+            <path d="M18.2 16.85a2.6 2.6 0 0 0-1.52.43 1.18 1.18 0 0 1 1.14.49v.06a1.15 1.15 0 0 1 .18.62 2.25 2.25 0 0 1-.18.71 1.34 1.34 0 0 1-.53.44 2.13 2.13 0 0 1-.71.09 1.43 1.43 0 0 1-.62-.36 1.26 1.26 0 0 1-.36-.76 3.21 3.21 0 0 0-.18 1.59 3 3 0 0 0 2.22 2.21 3.23 3.23 0 0 0 1.6-.17 2.15 2.15 0 0 0 1.25-1.06 2.44 2.44 0 0 0 .51-1.55 2.78 2.78 0 0 0-2.8-2.74Z" fill="#0a73b7"></path>
+            <path d="M20.86 0A20.86 20.86 0 0 0 .52 25.49 7.1 7.1 0 0 1 7 19.85c4.43-.56 5.27-.51 5.38-.43.33-.55 2.56-4.09 6-4.25 3.74-.18 4.36-.09 4.72-.36a.63.63 0 0 0 .26-.84.38.38 0 0 0-.09-.13c-.09-.09-.09-.18-.17-.18a1.19 1.19 0 0 1 1.51.62 1.21 1.21 0 0 1 .09.53c1.06-.09 3.73-.79 3.73-2.12 0-.41-.53-1-.53-1s2.1.56 2.1 1.71-1.51 1.68-1.51 1.68a29.64 29.64 0 0 0 4.89.35c1.56-.16 5.54-1.9 6.36-3.35V12A20.86 20.86 0 0 0 20.86 0Z" fill="#0a73b7"></path>
+        </svg>
+    </div>
+</marquee> 
+
+<header>
+    <div class="content-inner">
+        <hgroup class="logo left">
+            <h1>Nusatrip</h1>
+        </hgroup>
+    </div>
+    <nav class="left">
+        <ul id="nav" class="dropdown dropdown-linear">
+            <li class="active"><a class="main-menu" href="#/admin" ref="home-tabs">Home</a></li>
+            <li><a class="main-menu" href="#/admin/hotels_index" ref="hotel-tabs">Hotel</a></li>
+            <li class=""><a class="main-menu" href="#/admin/airlines_index" ref="airline-tabs">Airlines</a></li>
+            <li class=""><a class="main-menu" href="#/admin/bookings_index" ref="bookings-tabs">Bookings</a></li>
+            <li class=""><a class="main-menu" href="#/admin/payments_index" ref="payment-tabs">Payments</a></li>
+            <li><a class="main-menu" href="#/admin/accounting_index" ref="accounting-tabs">Accounting</a></li>
+            <li><a class="main-menu" href="#/admin/reports_index" ref="report-tabs">Reports</a></li>
+            <li><a class="main-menu" href="#/admin/administration_index" ref="administration-tabs">Administration</a></li>
+            <li><a href="#/admin/content/index">Content</a></li>
+        </ul>
+    </nav>
+</header>
+
+<br>
+<div style="padding-left: 64px;">
+    <div style="text-align: left;">
+        <h2><u>Tool Gue :</u></h2>
+    </div>
+    <div class="squarepant" id="squarePant"></div>
+    <div class="squarepant" style="margin-top: 10px;">
+        <div class="cell">
+            <a href="adyenGen.html" target="_blank">Adyen</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    var ipAddresses = ["172.28.10.10", "172.28.10.10", "172.28.20.20", "172.28.28.70", "172.28.172.200", "172.28.255.86"];
+    var ports = ["8006", "9000", "8006", "8006", "8006", "8006"];
+    var labels = ["aan", "docker", "", "", "", "rian"];
+    var cellfilling = function(e){
+        for(i=0; i < ipAddresses.length; i++){
+            var div1 = document.createElement("div");
+            var aLogo = document.createElement("a");
+            var aImg = document.createElement("img");
+            var div2 = document.createElement("div");
+            // aImg.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHzKreD2KRGihtTg5o3YP1gqrzeaw5KhvclcaiU2YzOKDeFl-lT86HZrnFd2jAimGhDkg");
+            aImg.setAttribute("class", "bulat");
+            aLogo.setAttribute("href","//"+ipAddresses[i]+":"+ports[i]);
+            aLogo.setAttribute("target", "_blank");
+            div1.setAttribute("class", "cell");
+            div1.append(aLogo);
+            div2.innerHTML = ipAddresses[i] +"<br>"+ labels[i];
+            aLogo.append(aImg); 
+            aLogo.append(div2);
+            e.append(div1);
+        }
+    }
+    document.onload = cellfilling(document.getElementById("squarePant"));
+</script>
+
+</body>
+
+</html>
