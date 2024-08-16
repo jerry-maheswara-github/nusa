@@ -234,9 +234,33 @@
 </div>
 
 <script>
-    var ipAddresses = ["172.28.10.10", "172.28.10.10", "172.28.20.20", "172.28.28.70", "172.28.172.200", "172.28.255.86"];
-    var ports = ["8006", "9000", "8006", "8006", "8006", "8006"];
-    var labels = ["aan", "docker", "", "", "", "rian"];
+    var ipAddresses = [
+        "172.28.10.10", 
+        "172.28.10.10", 
+        "172.28.20.20", 
+        "172.28.28.70", 
+        "172.28.172.200", 
+        "172.28.255.86",
+        "172.29.0.3"
+        ];
+    var ports = [
+        "8006", 
+        "9000", 
+        "8006", 
+        "8006", 
+        "8006", 
+        "8006", 
+        "8006"
+        ];
+    var labels = [
+        "aan", 
+        "aan-docker", 
+        "rosyid", 
+        "jerry1", 
+        "jerry2", 
+        "rian",
+        "nu54tr1pt35t"
+        ];
     var cellfilling = function(e){
         for(i=0; i < ipAddresses.length; i++){
             var div1 = document.createElement("div");
