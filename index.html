@@ -235,25 +235,38 @@
 
 <script>
     var ipAddresses = [
-        "172.28.10.10", 
-        "172.28.10.10", 
-        "172.28.20.20", 
+        "172.28.10.10",
+        "172.28.10.10",
+        "172.28.20.20",
         "172.28.30.30",
         "172.28.28.70",
-        "172.28.172.200", 
+        "172.28.172.200",
         "172.28.255.86",
-        "172.29.0.3"
+        "172.29.0.3",
+        "172.28.255.39"
         ];
+    var protocol = [
+        "https",
+        "https",
+        "https",
+        "https",
+        "https",
+        "https",
+        "https",
+        "https",
+        "http"
+    ];
     var ports = [
-        "8006", 
-        "9000", 
-        "8006", 
+        "8006",
+        "9000",
         "8006",
         "8006",
-        "8006", 
-        "8006", 
-        "8006"
-        ];
+        "8006",
+        "8006",
+        "8006",
+        "8006",
+        "80"
+    ];
     var labels = [
         "aan", 
         "aan-docker", 
@@ -262,7 +275,8 @@
         "jerry1",
         "jerry2", 
         "rian",
-        "nu54tr1pt35t"
+        "nu54tr1pt35t",
+        "cctv"
         ];
     var cellfilling = function(e){
         for(i=0; i < ipAddresses.length; i++){
@@ -272,7 +286,7 @@
             var div2 = document.createElement("div");
             // aImg.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHzKreD2KRGihtTg5o3YP1gqrzeaw5KhvclcaiU2YzOKDeFl-lT86HZrnFd2jAimGhDkg");
             aImg.setAttribute("class", "bulat");
-            aLogo.setAttribute("href","//"+ipAddresses[i]+":"+ports[i]);
+            aLogo.setAttribute("href",protocol[i]+"://"+ipAddresses[i]+":"+ports[i]);
             aLogo.setAttribute("target", "_blank");
             div1.setAttribute("class", "cell");
             div1.append(aLogo);
